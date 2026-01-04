@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Software Engineer Portfolio</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2436",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Hide scrollbar for clean look in some browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101622; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #232f48; 
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[960px] mx-auto px-4 sm:px-10 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight">John Doe</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#skills">Skills</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#experience">Experience</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+<button class="bg-primary hover:bg-primary/90 text-white text-sm font-bold h-9 px-4 rounded-lg transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Resume
+                </button>
+</div>
+<!-- Mobile Menu Icon (Placeholder for responsive behavior) -->
+<button class="md:hidden text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex flex-col items-center w-full">
+<div class="w-full max-w-[960px] flex flex-col px-4 sm:px-10">
+<!-- Hero Section -->
+<section class="py-16 md:py-24 flex flex-col md:flex-row gap-10 items-center" id="hero">
+<div class="flex-1 flex flex-col gap-6 text-left">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                            Available for work
+                        </div>
+<h1 class="text-4xl md:text-6xl font-black leading-[1.1] tracking-tight mb-4">
+                            Building digital <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">experiences</span> that matter.
+                        </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed max-w-[540px]">
+                            I'm a Full Stack Developer passionate about building scalable web applications and solving complex problems with clean code.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<a class="flex items-center justify-center h-12 px-6 rounded-lg bg-primary text-white font-bold hover:bg-blue-600 transition-colors" href="#projects">
+                            View Projects
+                        </a>
+<a class="flex items-center justify-center h-12 px-6 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" href="#contact">
+                            Contact Me
+                        </a>
+</div>
+</div>
+<div class="w-full md:w-[400px] aspect-square relative group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-purple-500/20 rounded-2xl rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+<div class="relative w-full h-full bg-cover bg-center rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl" data-alt="Professional portrait of a software engineer smiling in a modern office setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAw7NEyEmHLBT_F7EWqm2NFfXrj_RhtG9Eu9jl-6oD8I9wx9l_QTcsoa0QTu9alFJGNelomn1JeF8SGm21us1fm_ktpVPZNh16p_xUZ-7WpfZM9xhHhx-0pLaPGyup-M-6gRDcpmMMT1Yfd5QsidAitQqUF6dwDrirmcKdXXSb-9aRj-zbZyZM6NT96zJ5wrcpzNRwlYpIfhY3O5yyTnJxcOcUPPDnF-Hxn7cIi5sjcAX0UNnUySvF5W95oQjmdeQ5-61M_6lCfvqwi');"></div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-12 border-t border-slate-200 dark:border-slate-800" id="about">
+<div class="flex flex-col gap-4">
+<h2 class="text-2xl md:text-3xl font-bold tracking-tight">About Me</h2>
+<p class="text-slate-600 dark:text-slate-300 text-base md:text-lg leading-relaxed">
+                        I am a dedicated software engineer with a strong background in web development. I specialize in creating efficient, robust, and user-friendly solutions. With over 5 years of experience in the industry, I have honed my skills in both frontend and backend technologies. I thrive in collaborative environments and am always eager to learn new technologies to stay ahead in this fast-paced field.
+                    </p>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-12 border-t border-slate-200 dark:border-slate-800" id="skills">
+<div class="flex flex-col gap-8">
+<h2 class="text-2xl md:text-3xl font-bold tracking-tight">Skills</h2>
+<div class="flex flex-col gap-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Languages &amp; Frameworks</h3>
+<div class="flex flex-wrap gap-3">
+<!-- Skill Item Helper Function Style -->
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-primary text-[20px]">javascript</span>
+<span class="font-medium text-sm">JavaScript (ES6+)</span>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-blue-400 text-[20px]">code</span>
+<span class="font-medium text-sm">React</span>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-white text-[20px]">data_object</span>
+<span class="font-medium text-sm">Next.js</span>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-blue-600 text-[20px]">css</span>
+<span class="font-medium text-sm">Tailwind CSS</span>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-green-500 text-[20px]">terminal</span>
+<span class="font-medium text-sm">Node.js</span>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-orange-500 text-[20px]">html</span>
+<span class="font-medium text-sm">HTML5</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Tools &amp; Platforms</h3>
+<div class="flex flex-wrap gap-3">
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-gray-400 text-[20px]">folder_open</span>
+<span class="font-medium text-sm">Git</span>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-blue-300 text-[20px]">cloud</span>
+<span class="font-medium text-sm">AWS</span>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-purple-400 text-[20px]">database</span>
+<span class="font-medium text-sm">PostgreSQL</span>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center gap-2 hover:border-primary transition-colors cursor-default">
+<span class="material-symbols-outlined text-white text-[20px]">deployed_code</span>
+<span class="font-medium text-sm">Docker</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-12 border-t border-slate-200 dark:border-slate-800" id="experience">
+<div class="flex flex-col gap-8">
+<h2 class="text-2xl md:text-3xl font-bold tracking-tight">Experience</h2>
+<div class="relative border-l border-slate-200 dark:border-slate-800 ml-3 space-y-12">
+<!-- Role 1 -->
+<div class="relative pl-8">
+<span class="absolute -left-[9px] top-1 h-[18px] w-[18px] rounded-full border-[3px] border-background-light dark:border-background-dark bg-primary"></span>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Software Engineer</h3>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full w-fit mt-1 sm:mt-0">2021 — Present</span>
+</div>
+<p class="text-primary font-medium mb-3">Inforvio Technology</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                Led the development of a cloud-based analytics platform. Architected the frontend using React and Redux, improving application performance by 40%. Mentored junior developers and implemented CI/CD pipelines to streamline deployment processes.
+                            </p>
+<ul class="list-disc list-inside text-slate-500 dark:text-slate-400 text-sm space-y-1">
+<li>Reduced server costs by 20% through optimization.</li>
+<li>Implemented a comprehensive testing strategy.</li>
+</ul>
+</div>
+<!-- Role 2 -->
+<div class="relative pl-8">
+<span class="absolute -left-[9px] top-1 h-[18px] w-[18px] rounded-full border-[3px] border-background-light dark:border-background-dark bg-slate-400 dark:bg-slate-600"></span>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Full Stack Developer</h3>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full w-fit mt-1 sm:mt-0">2018 — 2021</span>
+</div>
+<p class="text-primary font-medium mb-3">Yellowthemez</p>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                                Developed and maintained multiple e-commerce websites for clients. Integrated payment gateways (Stripe, PayPal) and built custom CMS solutions using Node.js and MongoDB. Collaborated with designers to ensure responsive and accessible UI implementation.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-12 border-t border-slate-200 dark:border-slate-800" id="projects">
+<div class="flex flex-col gap-8">
+<h2 class="text-2xl md:text-3xl font-bold tracking-tight">Featured Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Project 1 -->
+<div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+<div class="h-48 w-full bg-cover bg-center border-b border-slate-200 dark:border-slate-800 group-hover:scale-105 transition-transform duration-500" data-alt="Dashboard interface displaying financial charts and graphs for LendingStack project" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBgvoZ6MlqYbXH5Sv9tUpeHtuqgKyUOdXsJGuxbeFYrIkTPKzvKIYUQ9knVuM7uqqC6jOljEvAu8lVf9edXsAwECwWuLzznMFzQH5BDnnJeVHfsDDoAv_VwiJP550Q2JCUXERwbnNBvuikNHN2aJCpQuoQtpZcQ569SuWy5ATrXjz45NQMZ_zEUdg5v1nP877zP9yl2aBh637duVfOZmihCkj_hAskqxXBpu8cOI3M5xmz-ZVk-KSX6BFMnHq4goZUSpXRR8aF8WA6');"></div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-bold">LendingStack</h3>
+<div class="flex gap-2">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">open_in_new</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">code</span></a>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                                    A fintech application designed to streamline the loan approval process. Features real-time credit analysis, automated document verification, and a user-friendly dashboard for loan officers.
+                                </p>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="px-2 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary">React</span>
+<span class="px-2 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary">Node.js</span>
+<span class="px-2 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary">PostgreSQL</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group flex flex-col bg-surface-light dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+<div class="h-48 w-full bg-cover bg-center border-b border-slate-200 dark:border-slate-800 group-hover:scale-105 transition-transform duration-500" data-alt="Team collaboration workspace showing avatars and project boards for Teamoverseas project" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBp3Wy408-_rSOWf_vmLNQxs4B34wv2z67fce5AVz7KAcmNldwuJ6j6_Q6vz-OUTg_HEwJyCVQsqemUX_ZhsaiW1ZzNW7K8xl6OiARgeyIbgGThTnwynDfKnoyQ7Mqp1uPR4FP57C0Rm8Jc1cV7k_m8qt4Gr0OxffYkvKwS_wfLAM256h5RWWfQEJHtZhucUc8Jv-1q3UHQpiwgHpZvHNZF52FS41VkdD2Ce01JwWWpOs4s6ouGxViz61JtwQm7zsmFspGLomRgHBAe');"></div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-bold">Teamoverseas</h3>
+<div class="flex gap-2">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">open_in_new</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">code</span></a>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                                    A remote team management platform facilitating asynchronous communication. Includes time-zone conversion tools, integrated task management, and automated daily stand-up bots.
+                                </p>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="px-2 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary">Vue.js</span>
+<span class="px-2 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary">Firebase</span>
+<span class="px-2 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary">Tailwind</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 border-t border-slate-200 dark:border-slate-800 mb-10" id="contact">
+<div class="flex flex-col items-center text-center gap-6 max-w-[600px] mx-auto">
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[32px]">mail</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-black tracking-tight">Get In Touch</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">
+                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    </p>
+<a class="mt-4 flex items-center justify-center h-12 px-8 rounded-full bg-primary text-white font-bold text-lg hover:bg-blue-600 hover:shadow-lg hover:shadow-primary/25 transition-all" href="mailto:hello@johndoe.com">
+                        Say Hello
+                    </a>
+<div class="flex items-center gap-6 mt-8">
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="size-12 rounded-full bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:border-primary group-hover:text-primary transition-all">
+<!-- GitHub Icon Placeholder (using generic code icon for Material Symbols) -->
+<span class="material-symbols-outlined">code</span>
+</div>
+<span class="text-xs font-medium text-slate-500 group-hover:text-primary transition-colors">GitHub</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="size-12 rounded-full bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:border-primary group-hover:text-primary transition-all">
+<!-- LinkedIn Icon Placeholder (using generic group icon for Material Symbols) -->
+<span class="material-symbols-outlined">group</span>
+</div>
+<span class="text-xs font-medium text-slate-500 group-hover:text-primary transition-colors">LinkedIn</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="size-12 rounded-full bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:border-primary group-hover:text-primary transition-all">
+<!-- Twitter/X Icon Placeholder (using generic chat icon) -->
+<span class="material-symbols-outlined">chat</span>
+</div>
+<span class="text-xs font-medium text-slate-500 group-hover:text-primary transition-colors">Twitter</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-6 text-center text-sm text-slate-500 dark:text-slate-600 border-t border-slate-200 dark:border-slate-800">
+<p>© 2023 John Doe. Built with Tailwind CSS.</p>
+</footer>
+</div>
+</main>
+</body></html>
